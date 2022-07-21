@@ -1,0 +1,102 @@
+package project;
+
+public class PublicTraffic {
+	/*- 요소
+    - 번호 0
+    - 주유량0
+    - 속도0
+    - 속도 변경0
+    - 최대 승객 수 ...
+    - **있을 경우** {기타 공통 요소들}
+- 기능
+    - 운행 시작
+    - 속도 변경 0
+    - 상태 변경
+    - **있을 경우** {기타 공통 기능들}
+- 기본값
+    - 주유량 = 100
+    - 속도 = 0*/
+	int Number;
+	int Money;
+	int PassengerCount;
+	int amountofOil;
+	int Speed;
+	String a = "운행중";
+	String b = "차고지행";
+	int PassengerCountMax=30;
+
+	
+	// - 승객 탑승 추가 및 요금 합 기능
+	public void take(int PassengerCount,int Money) {
+		this.PassengerCount += PassengerCount;
+		this.Money += Money;
+		if(PassengerCount > PassengerCountMax) {
+			System.out.println("최대 승객 수 초과");
+		}
+	}
+	
+	
+	//주유량
+	public void takeOil(int amountofOil) {
+		if(amountofOil < 10) {
+			System.out.println("주유필요");
+			System.out.println(b);
+		}
+		if(amountofOil==0)System.out.println("운행불가");
+		this.amountofOil+=amountofOil;
+	}
+	
+	
+	//속도변경
+	public void SppedChange(int Speed) {
+		this.Speed += Speed;
+		if(Speed>=0) {
+			System.out.println("운행시작");
+			}
+		if(Speed==-1) {
+			System.out.println("운행종료");
+		}
+		
+		}
+	
+	
+	// 번호 요금 주유량 승객 스피드
+	public PublicTraffic(int Number, int Money, int amountofOil,int Speed) {
+		this.Number = Number;
+		this.Money = Money;
+		this.amountofOil = amountofOil;
+		PassengerCount++;
+		this.Speed = Speed;
+	}
+	
+	public void showBusinfo() {
+		System.out.println("버스"+Number+"번의 승객 수는 " + PassengerCount+"명 이고, 수입은 " + Money+"원이며,"+"주유량은"+amountofOil+", 속도는 "+ Speed+"km/h입니다." );
+		}
+	
+	public void showtaxiinfo() {
+		System.out.println("택시"+Number+"번의 승객 수는 " + PassengerCount+"명 이고, 수입은 " + Money+"원이며,"+"주유량은"+amountofOil+", 속도는 "+ Speed+"km/h입니다.");
+		}
+	
+	
+//	int changeSpeed;
+//	public void changeSpeed(int changeSpeed) {  //속도변경
+//		this.changeSpeed += changeSpeed;
+//		changeSpeed++;
+//	}
+//	
+//	int maxPassenger;
+//	public void maxPassenger(int maxPassenger) {  //최대승격수
+//		this.maxPassenger += maxPassenger;
+//		maxPassenger++;
+//	}
+//	
+//	int amountofOil;
+//	public void amountofOil(int amountofOil) {  //주유량
+//		this.amountofOil += amountofOil;
+//		amountofOil++;
+//	}
+	
+	
+	
+	}
+
