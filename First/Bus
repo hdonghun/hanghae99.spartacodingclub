@@ -1,0 +1,23 @@
+package project; 
+
+public class Bus extends PublicTraffic {
+	public Bus(int Number, int Money, int amountofOil, int Speed) {
+		super(Number, Money, amountofOil, Speed);
+		// TODO Auto-generated constructor stub
+	}
+	
+	int Money = 1000;
+	int PassengerCountMax=30;
+/*- 요소
+    - 현재 승객 수
+    - **있을 경우** {기타 버스 요소들}
+- 기능
+    - **있을 경우** {기타 버스 기능들}
+- 기본값
+    - 최대 승객 수 = 30
+    - 상태 = 운행
+    - 요금 = 1000*/
+
+		
+
+}
