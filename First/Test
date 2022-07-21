@@ -1,0 +1,42 @@
+package project;
+public class Test{
+	public static void main(String[] args) {
+		
+		//버스객체생성
+		PublicTraffic bus1 = new PublicTraffic(1004, 900, 100,0);
+		PublicTraffic bus2 = new PublicTraffic(1005, 950, 100,0);
+		
+		//버스1에 승객 2명 추가 및 그에 따른 버스1의요금추가해주기 기능 
+		bus1.take(2,1800);
+		//최대 승객 수 제한에 알려주기.
+		//콘솔 부분에는 특정 버스에 인원이 초과되었다고 나오지 않는다...ㅇ ㅓ떻게?
+		bus2.take(27,1800);
+
+		//주유량
+		bus2.takeOil(0);
+		
+		
+		//버스에 대한 정보 출력
+		bus1.showBusinfo();
+		bus2.showBusinfo();
+		
+		System.out.println("---------------------------------------------------------------------");		
+		//택시 객체생성
+		PublicTraffic taxi2 = new PublicTraffic(123, 3200,100,1);
+		PublicTraffic taxi1 = new PublicTraffic(678, 3200,100,1);
+		//택시 스피드 기존에 있던 속도에 얼만큼 더하고 뺄지 ( )괄호안에 입력
+		taxi1.SppedChange(20);
+		//택시 승객,요금 기능 이용
+		taxi2.take(1, 13500);
+		
+		//택시에 대한 정보 출력
+		taxi1.showtaxiinfo();
+		taxi2.showtaxiinfo();
+		
+		
+		
+
+		
+		
+	}
+}
